@@ -80,13 +80,13 @@ async function askQuestion() {
     // Display countdown in seconds
     let secondsLeft = 15;
     const countdown = setInterval(() => {
-        process.stdout.write(`\r⏳ Time left: ${secondsLeft--}s `);
+        process.stdout.write(`\r Time left: ${secondsLeft--}s `);
         if (secondsLeft < 0) clearInterval(countdown);
     }, 1000);
 
     const userChoice = await new Promise((resolve) => {
         const timer = setTimeout(() => {
-            console.log(`\n⏰ Time's up! Moving to next question.`);
+            console.log(`\n Time's up! Moving to next question.`);
             rl.pause();
             resolve(null);
         }, 15000);
@@ -143,7 +143,7 @@ function showResults() {
     console.log(`You got ${correctCount} out of ${questions.length} correct.`);
 
     function askToPlayAgain() {
-    rl.question('\n🔁 Do you want to play again? (Yes/No): ', (input) => {
+    rl.question('\n Do you want to play again? (Yes/No): ', (input) => {
         const answer = input.trim().toLowerCase();
 
         if (answer === 'yes') {
@@ -154,10 +154,10 @@ function showResults() {
             // start over
             askQuestion();
         } else if (answer === 'no') {
-            console.log('\n👋 Thanks for playing. Goodbye!');
+            console.log('\n Thanks for playing. Goodbye!');
             rl.close();
         } else {
-            console.log("\n❓ Please answer 'Yes' or 'No'.");
+            console.log("\  Please answer 'Yes' or 'No'.");
             askToPlayAgain(); // ask again
         }
     });
