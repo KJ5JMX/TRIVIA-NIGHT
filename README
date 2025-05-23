@@ -1,0 +1,24 @@
+# CLI Trivia Night
+
+A command-line trivia game built in JavaScript using Node.js. Answer fun and quirky questions under a 15-second timer — can you beat the clock and get a perfect score?
+
+---
+
+##  Features
+
+- Interactive command-line interface
+- 15-second countdown timer per question
+- Humor-based questions and answers
+- Final score breakdown with correctness for each question
+- Play again menu
+- Start menu with Yes / No / Maybe logic
+
+---
+
+##  How to Run
+
+1. **Clone the repo:**
+   ```bash
+   git clone 
+   run npm install
+   node index.js to play
